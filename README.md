@@ -49,9 +49,9 @@ The same Spring Boot application can run multiple times on different ports using
 
 | Instance | VM Arguments | Port |
 |---|---|---|
-| Greet API Instance 1 | `-Dserver.port=8081` | 8081 |
-| Greet API Instance 2 | `-Dserver.port=8082` | 8082 |
-| Greet API Instance 3 | `-Dserver.port=8083` | 8083 |
+| Greet API Instance 1 | `-Dserver.port=8081` | 8086 |
+| Greet API Instance 2 | `-Dserver.port=8082` | 8087 |
+| Greet API Instance 3 | `-Dserver.port=8083` | 8088 |
 
 ### IntelliJ IDEA Configuration
 
