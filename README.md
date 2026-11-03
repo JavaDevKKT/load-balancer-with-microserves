@@ -69,7 +69,7 @@ All instances run the same application code but listen on different ports.
 Configure each Greet API instance to register with the Eureka Server.
 
 ```properties
-spring.application.name=GREET-API
+spring.application.name=02-NOV-26-GREET-API
 
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
 
@@ -84,7 +84,7 @@ All instances use the same application name: `GREET-API`.
 The Consumer API communicates with Greet API using OpenFeign.
 
 ```java
-@FeignClient(name = "GREET-API")
+@FeignClient(name = "02-NOV-26-GREET-API")
 public interface GreetClient {
 
     @GetMapping("/greet")
@@ -143,9 +143,9 @@ Invoke the Consumer API multiple times to observe responses from different Greet
 Example responses:
 
 ```text
-Hello from Greet API running on port: 8081
-Hello from Greet API running on port: 8082
-Hello from Greet API running on port: 8083
+Hello from Greet API running on port: 8086
+Hello from Greet API running on port: 8087
+Hello from Greet API running on port: 8088
 ```
 
 The default Spring Cloud LoadBalancer implementation generally uses round-robin selection.
@@ -163,9 +163,9 @@ The default Spring Cloud LoadBalancer implementation generally uses round-robin 
 ## ▶️ Execution Order
 
 1. Start Eureka Server on port `8761`.
-2. Start Greet API instance on port `8081`.
-3. Start Greet API instance on port `8082`.
-4. Start Greet API instance on port `8083`.
+2. Start Greet API instance on port `8086`.
+3. Start Greet API instance on port `8087`.
+4. Start Greet API instance on port `8088`.
 5. Start Consumer API.
 6. Invoke the Consumer API endpoint and observe load balancing.
 
