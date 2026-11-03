@@ -49,9 +49,9 @@ The same Spring Boot application can run multiple times on different ports using
 
 | Instance | VM Arguments | Port |
 |---|---|---|
-| Greet API Instance 1 | `-Dserver.port=8081` | 8086 |
-| Greet API Instance 2 | `-Dserver.port=8082` | 8087 |
-| Greet API Instance 3 | `-Dserver.port=8083` | 8088 |
+| Greet API Instance 1 | `-Dserver.port=8086` | 8086 |
+| Greet API Instance 2 | `-Dserver.port=8087` | 8087 |
+| Greet API Instance 3 | `-Dserver.port=8088` | 8088 |
 
 ### IntelliJ IDEA Configuration
 
@@ -114,7 +114,7 @@ Spring Cloud LoadBalancer selects an available Greet API instance using service 
           |         |         |
           v         v         v
        Greet API Greet API Greet API
-        :8081     :8082     :8083
+        :8086     :8087     :8088
           |         |         |
           ---------------------
              Same Application
