@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: 02-nov-26-welcome-api
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
